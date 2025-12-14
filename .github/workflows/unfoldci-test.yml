@@ -51,8 +51,6 @@ jobs:
         if: always()
         id: flaky-analysis
         uses: UnfoldAI-Labs/UnfoldCI-flaky-autopilot-action@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           api-key: ${{ secrets.UNFOLDCI_API_KEY }}
           results-path: test-results/junit-results.xml
